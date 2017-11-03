@@ -48,14 +48,5 @@ east_trains = list_of_trains("east", trains)
 p north_trains
 p east_trains
 
-
-
-
-
-
-#   if train[:direction] == "north"
-#     train << north_trains
-#   end
-# end
-#
-# p north_trains
+trains[0][:first_depature_time] = 6
+p trains
