@@ -18,18 +18,35 @@ p train_111_direction
 p train_80b_frequency
 p train_610_direction
 
-north_trains = Array.new
 
-trains.each do |train|
-  train.each do |key, value|
-    if value == "north"
-      north_trains << train[:train]
-    else
+
+def list_of_trains(direction, trainlist)
+  list_of_direction_trains = Array.new
+  trainlist.each do |train|
+    train.each do |key, value|
+      if value == direction
+        list_of_direction_trains << train[:train]
+      else
+      end
     end
   end
+  return list_of_direction_trains
 end
 
+# trains.each do |train|
+#   train.each do |key, value|
+#     if value == "north"
+#       north_trains << train[:train]
+#     else
+#     end
+#   end
+# end
+
+north_trains = list_of_trains("north", trains)
+east_trains = list_of_trains("east", trains)
+
 p north_trains
+p east_trains
 
 
 
