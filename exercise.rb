@@ -20,4 +20,25 @@ p train_610_direction
 
 north_trains = Array.new
 
-north_trains.each do |name
+trains.each do |train|
+  train.each do |key, value|
+    if value == "north"
+      north_trains << train[:train]
+    else
+    end
+  end
+end
+
+p north_trains
+
+
+
+
+
+
+#   if train[:direction] == "north"
+#     train << north_trains
+#   end
+# end
+#
+# p north_trains
